@@ -1,0 +1,32 @@
+@import '../../containers/home-page/home-page.component';
+
+.table {
+  max-width: 100rem;
+  margin: 0 auto;
+  .mat-tab-group {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+.header {
+  width: 100%;
+  position: relative;
+  padding-top: 1rem;
+  @include flexCenter();
+  &_col {
+    width: 100%;
+    padding: 1rem;
+    &_tr {
+      width: 100%;
+      @include flexCenter();
+      padding-bottom: 1rem;
+    }
+    &_info {
+      p {
+        @include flexCenter();
+        padding: .3rem;
+        border-bottom: .1rem solid #35353535;
+      }
+    }
+  }
+}

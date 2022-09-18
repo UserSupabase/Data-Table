@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>table</mat-icon>
+  </button>
+  <span>Tables</span>
+  <span class="example-spacer"></span>
+</mat-toolbar>
+
+<div class="container" *ngIf="users">
+  <div class="container__shared">
+    <div class="container__shared_section">
+      You have {{users.length}} transactions
+    </div>
+    <div
+    class="container__shared_section">
+      Income {{keysIncome}}
+    </div>
+    <div class="container__shared_section">
+      Outcome {{keysOutcome}}
+    </div>
+    <div class="container__shared_section">
+      Loans {{keysLoan}}
+    </div>
+    <div class="container__shared_section">
+      Investments {{keysInvest}}
+    </div>
+  </div>
+  <app-table-category
+  [users]="users">
+  </app-table-category>
+</div>

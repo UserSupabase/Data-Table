@@ -1,0 +1,112 @@
+<div class="table">
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Income">
+      <div class="header">
+        <div class="header_col">
+          <div class="header_col_tr">Name</div>
+          <div
+          class="header_col_info"
+          *ngFor="let user of users">
+           <ng-container *ngIf="user.type === Type.INCOME">
+            <p>
+              {{user.name.first}}
+              {{user.name.last}}
+            </p>
+           </ng-container>
+          </div>
+        </div>
+        <div class="header_col">
+          <div class="header_col_tr">Acount</div>
+          <div
+          class="header_col_info"
+          *ngFor="let user of users">
+           <ng-container *ngIf="user.type === Type.INCOME">
+            <p>{{user.amount | floating}}</p>
+           </ng-container>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Outcome">
+      <div class="header">
+        <div class="header_col">
+          <div class="header_col_tr">Name</div>
+          <div
+          class="header_col_info"
+          *ngFor="let user of users">
+           <ng-container *ngIf="user.type === Type.OUTCOME">
+            <p>
+              {{user.name.first}}
+              {{user.name.last}}
+            </p>
+           </ng-container>
+          </div>
+        </div>
+        <div class="header_col">
+          <div class="header_col_tr">Acount</div>
+          <div
+          class="header_col_info"
+          *ngFor="let user of users">
+           <ng-container *ngIf="user.type === Type.OUTCOME">
+            <p>{{user.amount | floating}}</p>
+           </ng-container>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Loans">
+      <div class="header">
+        <div class="header_col">
+          <div class="header_col_tr">Name</div>
+          <div
+          class="header_col_info"
+          *ngFor="let user of users">
+           <ng-container *ngIf="user.type === Type.LOAN">
+            <p>
+              {{user.name.first}}
+              {{user.name.last}}
+            </p>
+           </ng-container>
+          </div>
+        </div>
+        <div class="header_col">
+          <div class="header_col_tr">Acount</div>
+          <div
+          class="header_col_info"
+          *ngFor="let user of users">
+           <ng-container *ngIf="user.type === Type.LOAN">
+            <p>{{user.amount | floating}}</p>
+           </ng-container>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Investments">
+      <div class="header">
+        <div class="header_col">
+          <div class="header_col_tr">Name</div>
+          <div
+          class="header_col_info"
+          *ngFor="let user of users">
+           <ng-container *ngIf="user.type === Type.INVESTMENT">
+            <p>
+              {{user.name.first}}
+              {{user.name.last}}
+            </p>
+           </ng-container>
+          </div>
+        </div>
+        <div class="header_col">
+          <div class="header_col_tr">Acount</div>
+          <div
+          class="header_col_info"
+          *ngFor="let user of users">
+           <ng-container *ngIf="user.type === Type.INVESTMENT">
+            <p>{{user.amount | floating}}</p>
+           </ng-container>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
